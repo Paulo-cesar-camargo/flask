@@ -1,0 +1,14 @@
+.titulo{
+    text-align: center;
+    
+}
+.fundo{
+    background-color: black;
+}
+.row{
+    margin-left: 5px;
+    padding-top: 10px;
+}
+
+
+/*<link rel="stylesheet" href="../static/style.css">*/

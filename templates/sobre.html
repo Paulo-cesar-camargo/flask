@@ -1,0 +1,26 @@
+{%extends "base.html"%}
+{%block conteudo%}
+    <header class="cabecalho">
+        <h1 class="titulo">Diario do Professor</h1>
+    </header>
+    <hr>
+    {%for registro in registros %}
+    <details>
+        <summary><i class="bi bi-folder-symlink"> </i>{{registro.aluno}}</summary>
+            <p>{{registro.nota}}</p>       
+    </details>
+    {%endfor%}
+    <form action="{{url_for('sobre')}}" method="POST">
+        <div class="mb-3">
+            <label><i class="bi bi-person"> </i>Aluno</label>
+            <input type="text" name="aluno" required class="form-control" placeholder="Digite o nome do Aluno">
+        </div>
+        <div class="mb-3">
+            <label><i class="bi bi-check-square"> </i>Nota</label>
+            <input type="text" name="nota" required class="form-control" placeholder="Digite uma nota">
+        </div>
+        <button class="btn btn-success">Adicionar</button>
+    </form>
+    <hr>
+    
+{%endblock conteudo%}
